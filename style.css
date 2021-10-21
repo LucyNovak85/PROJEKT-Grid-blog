@@ -16,7 +16,7 @@ html { box-sizing: border-box; }
 body {
 	margin: 0;
 	padding: 30px;
-	font-family:  'Alice', serif;
+	font-family:  'Alice', serif; 
 	font-size: 18px;
 	line-height: 1.5;
 }
@@ -30,11 +30,20 @@ h1, h2, h3 {
 h1 {
 	color: var(--zelena);
 	font-size: 72px;
+    margin-bottom: 35px;
 }
 
 h2 {
 	color: var(--limetka);
 	font-size: 54px;
+}
+
+h1, h2, h3, p, footer, header {
+	grid-column: 2;
+}
+
+figure {
+	grid-column: 1 / 4;
 }
 
 blockquote {
@@ -45,51 +54,6 @@ blockquote {
 	text-align: center;
 }
 
-.meta {
-	color: var(--seda);
-}
-
-.blog {
-	display: grid;
-	grid-template-columns: 1fr 4fr 2fr;
-	column-gap: 40px;
-
-}
-h1, h2, h3, p, footer, header {
-	grid-column: 2;
-}
-
-figure {
-	grid-column: 1 / 4;
-}
-
-.tip-vlevo {
-	grid-column: 1;
-}
-.tip-vpravo {
-	grid-column: 3;
-}
-
-.tip-vlevo > img {
-	width: 50%;
-}
-
-.tip-vlevo > p {
-	
-}
-.tip-vlevo a,
-.tip-vpravo a {
-	color: var(--cervena);
-}
-
-.tip-vlevo,
-.tip-vpravo {
-	color: var(--tmava);
-	font-size: small;
-	background-color: var(--svetla);
-	background-size: contain;
-}
-	
 figcaption {
 	color: var(--seda);
 }
@@ -113,6 +77,45 @@ blockquote::after {
 	margin-left: 560px;
 	margin-top: 25px;
 	margin-bottom: 25px;
+}
+
+
+.meta {
+	color: var(--seda);
+}
+
+.blog {
+	display: grid;
+	grid-template-columns: 1fr 4fr 2fr;
+	column-gap: 40px;
+
+}
+
+.tip-vlevo {
+	grid-column: 1;
+}
+
+.tip-vpravo {
+	grid-column: 3;
+}
+
+.tip-vlevo > img {
+	width: 50%;
+}
+
+.tip-vlevo a,
+.tip-vpravo a {
+	color: var(--cervena);
+}
+
+.tip-vlevo,
+.tip-vpravo {
+	color: var(--tmava);
+	font-size: small;
+	background-color: var(--svetla);
+	border-right: 3px solid var(--oranzova);
+	display:block;
+	align-self: center;
 }
 
 /*
