@@ -2,6 +2,16 @@
 html { box-sizing: border-box; }
 *, :after, :before { box-sizing: inherit; }
 
+:root {
+	--svetla: #edf3f5;
+	--seda: #b2bec3;
+	--tmava: #636e72;
+	--oranzova: #ee5a24;
+	--cervena: #ea2027;
+	--zluta: #f79f1f;
+	--zelena: #a3cb38;
+	--limetka: #c4e538;
+}
 
 body {
 	margin: 0;
@@ -17,26 +27,106 @@ h1, h2, h3 {
 	margin: 0;
 }
 
-blockquote {
-	font-family: 'Kaushan Script', cursive;
+h1 {
+	color: var(--zelena);
+	font-size: 72px;
 }
 
-/* --------------------------------------------------- */
+h2 {
+	color: var(--limetka);
+	font-size: 54px;
+}
 
-/* barvy */
-:root {
-	--svetla: #edf3f5;
-	--seda: #b2bec3;
-	--tmava: #636e72;
-	--oranzova: #ee5a24;
-	--cervena: #ea2027;
-	--zluta: #f79f1f;
-	--zelena: #a3cb38;
-	--limetka: #c4e538;
+blockquote {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 32px;
+	color: var(--seda);
+	grid-column: 1 / 4;
+	text-align: center;
+}
+
+.meta {
+	color: var(--seda);
+}
+
+.blog {
+	display: grid;
+	grid-template-columns: 1fr 4fr 2fr;
+	column-gap: 40px;
+
+}
+h1, h2, h3, p, footer, header {
+	grid-column: 2;
+}
+
+figure {
+	grid-column: 1 / 4;
+}
+
+.tip-vlevo {
+	grid-column: 1;
+}
+.tip-vpravo {
+	grid-column: 3;
+}
+
+.tip-vlevo > img {
+	width: 50%;
+}
+
+.tip-vlevo > p {
+	
+}
+.tip-vlevo a,
+.tip-vpravo a {
+	color: var(--cervena);
+}
+
+.tip-vlevo,
+.tip-vpravo {
+	color: var(--tmava);
+	font-size: small;
+	background-color: var(--svetla);
+	background-size: contain;
+}
+	
+figcaption {
+	color: var(--seda);
+}
+
+footer {
+	color: var(--seda);
+	font-size: small;  
+}
+
+footer a {
+	color: var(--seda);
+}
+
+blockquote::before,
+blockquote::after {
+	content:"";
+	display: block;
+	width: 110px;
+	height: 2px;
+	background-color: var(--limetka);
+	margin-left: 560px;
+	margin-top: 25px;
+	margin-bottom: 25px;
 }
 
 /*
-	Všimni si, jak jsou zde nadefinované barvy.
+.tip-vlevo,
+.tip-vpravo::after {
+	content:"";
+	display: ;
+	width: 50px;
+	height: 2px;
+	background-color: var(--oranzova);
+}		
+
+
+Všimni si, jak jsou zde nadefinované barvy.
 	Potřebný kód barvy si odtamtud můžeš vyzobnout a použít
 	ve svém kódu, ale existuje i lepší způsob.
 
@@ -64,5 +154,7 @@ blockquote {
 	- https://www.w3schools.com/css/css3_variables.asp
 	- https://css-tricks.com/patterns-for-practical-css-custom-properties-use/
 	- https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/
+
+}
 */
 
